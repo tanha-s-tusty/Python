@@ -1,0 +1,16 @@
+num = int(input("Enter a number: "))
+
+binary = ""
+
+if num == 0:
+    binary = "0"
+
+while num > 0:
+
+    remainder = num % 2
+
+    binary = str(remainder) + binary
+
+    num //= 2
+
+print("Binary =", binary)
