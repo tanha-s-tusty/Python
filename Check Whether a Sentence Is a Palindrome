@@ -1,0 +1,14 @@
+text = input("Enter a sentence: ")
+
+cleaned = ""
+
+for char in text.lower():
+    if char.isalnum():
+        cleaned += char
+
+reverse = cleaned[::-1]
+
+if cleaned == reverse:
+    print("Palindrome")
+else:
+    print("Not palindrome")
