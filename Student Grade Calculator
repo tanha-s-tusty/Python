@@ -1,0 +1,27 @@
+name = input("Enter student name: ")
+
+mark1 = float(input("Enter first subject marks: "))
+mark2 = float(input("Enter second subject marks: "))
+mark3 = float(input("Enter third subject marks: "))
+
+total = mark1 + mark2 + mark3
+average = total / 3
+
+if average >= 80:
+    grade = "A+"
+elif average >= 70:
+    grade = "A"
+elif average >= 60:
+    grade = "B"
+elif average >= 50:
+    grade = "C"
+elif average >= 40:
+    grade = "D"
+else:
+    grade = "F"
+
+print("\n--- Student Result ---")
+print("Name:", name)
+print("Total marks:", total)
+print("Average:", average)
+print("Grade:", grade)
