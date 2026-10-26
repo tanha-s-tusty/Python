@@ -1,0 +1,31 @@
+balance = 5000
+
+while True:
+    print("\n--- ATM Menu ---")
+    print("1. Check Balance")
+    print("2. Withdraw Money")
+    print("3. Exit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == "1":
+        print("Your balance is:", balance)
+
+    elif choice == "2":
+        amount = float(input("Enter withdrawal amount: "))
+
+        if amount <= 0:
+            print("Enter a valid amount")
+        elif amount > balance:
+            print("Insufficient balance")
+        else:
+            balance -= amount
+            print("Withdrawal successful")
+            print("Remaining balance:", balance)
+
+    elif choice == "3":
+        print("Thank you for using the ATM")
+        break
+
+    else:
+        print("Invalid choice")
