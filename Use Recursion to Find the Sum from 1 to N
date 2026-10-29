@@ -1,0 +1,13 @@
+def calculate_sum(n):
+    if n <= 0:
+        return 0
+
+    return n + calculate_sum(n - 1)
+
+
+number = int(input("Enter a positive number: "))
+
+if number < 0:
+    print("Please enter a non-negative number")
+else:
+    print("Sum:", calculate_sum(number))
