@@ -1,0 +1,29 @@
+students = {}
+
+while True:
+    print("\n1. Add student")
+    print("2. Display students")
+    print("3. Exit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == "1":
+        name = input("Enter student name: ")
+        marks = float(input("Enter marks: "))
+
+        students[name] = marks
+        print("Student added successfully")
+
+    elif choice == "2":
+        if not students:
+            print("No student records found")
+        else:
+            for name, marks in students.items():
+                print(name, ":", marks)
+
+    elif choice == "3":
+        print("Program ended")
+        break
+
+    else:
+        print("Invalid choice")
