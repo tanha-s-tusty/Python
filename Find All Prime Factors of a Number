@@ -1,0 +1,15 @@
+num = int(input("Enter a number: "))
+
+if num < 2:
+    print("No prime factors")
+else:
+    print("Prime factors:")
+
+    divisor = 2
+
+    while divisor <= num:
+        if num % divisor == 0:
+            print(divisor)
+            num = num // divisor
+        else:
+            divisor += 1
