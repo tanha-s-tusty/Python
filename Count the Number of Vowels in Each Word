@@ -1,0 +1,12 @@
+sentence = input("Enter a sentence: ")
+
+words = sentence.split()
+
+for word in words:
+    count = 0
+
+    for char in word.lower():
+        if char in "aeiou":
+            count += 1
+
+    print(word, ":", count)
