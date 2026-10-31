@@ -1,0 +1,23 @@
+text = input("Enter a string: ")
+
+frequency = {}
+
+for char in text:
+    frequency[char] = frequency.get(char, 0) + 1
+
+sorted_items = sorted(
+    frequency.items(),
+    key=lambda item: item[1],
+    reverse=True
+)
+
+if len(sorted_items) < 2:
+    print("No second character frequency")
+else:
+    second_frequency = sorted_items[1][1]
+
+    for char, count in sorted_items:
+        if count == second_frequency:
+            print("Character:", char)
+            print("Frequency:", count)
+            break
