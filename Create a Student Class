@@ -1,0 +1,18 @@
+class Student:
+
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+
+    def calculate_average(self):
+        return sum(self.marks) / len(self.marks)
+
+    def display(self):
+        print("Name:", self.name)
+        print("Marks:", self.marks)
+        print("Average:", self.calculate_average())
+
+
+student1 = Student("Rahim", [80, 85, 90])
+
+student1.display()
